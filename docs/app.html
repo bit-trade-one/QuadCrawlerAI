@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.1.0 for Windows" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+<script type="text/javascript" src="js/common.js"></script>
+<script src="js/clipboard.min.js"></script>
+<title>そーたメイ - つくるっち</title>
+</head>
+<body id="hpb-template-01-24-01">
+<div id="fb-root"></div>
+<div id="top">
+  <div id="hpb-header">
+    <h1>クアッドクローラーAI用プログラミングアプリ「つくるっち」</h1>
+  </div>
+  <!-- /#hpb-header --><!-- navi -->
+  <div id="hpb-nav">
+    <ul>
+      <li><a href="index.html">New</a></li>
+      <li><a href="usb2bt.html">USB2BT</a></li>
+      <li><a href="familyday.html">つくるっち</a></li>
+      <li><a href="bitclock.html">BitClock</a></li>
+      <li><a href="miscellaneous.html">その他</a></li>
+      <li><a href="https://www.facebook.com/sohta02">Facebook</a></li>
+      <li><a href="https://twitter.com/sohta02">twitter</a></li>
+    </ul>
+  </div>
+  <!-- /#hpb-nav --><!-- navi end -->
+  <div id="contents">
+    <div id="main">
+      <p>　　<a href="https://sohta02.sakura.ne.jp/tukurutch/"><img src="images/TuKuRuCh-Logo_FULL.png" width="353" height="100" border="0" /></a></p>
+      <ul>
+        <li><a href="#app">アプリ</a></li>
+        <li><a href="#setup_esp32">セットアップ</a></li>
+        <li><a href="#error">WiFiで接続できないとき</a></li>
+      </ul>
+
+      <h3><a name="app" id="app">アプリ</a></h3>
+      <p>for USB接続：<a href="https://sohta02.sakura.ne.jp/tukurutch/">https://sohta02.sakura.ne.jp/tukurutch/</a>　（<a href="https://sohta02.sakura.ne.jp/tukurutch/list.html">サンプル一覧</a>）<br />
+      for WiFi接続：<a href="http://sohta02.sakura.ne.jp/tukurutch/">http://sohta02.sakura.ne.jp/tukurutch/</a>　（<a href="http://sohta02.sakura.ne.jp/tukurutch/list.html">サンプル一覧</a>）</p>
+
+      <h3><a name="setup_esp32" id="setup_esp32">セットアップ</a></h3>
+      <ol>
+        <li>chromeブラウザ(chrome89)でカメラ画像を表示するためにchromeブラウザの設定を変更する必要があります。<br />
+        下記アドレスをコピー。<br />
+        <input id="waveTK" value="chrome://flags/#block-insecure-private-network-requests" size="60" />
+        <button type="button" class="btn" data-clipboard-target="#waveTK">コピー</button></li>
+        <li>ブラウザのアドレスバーに貼り付けて開く。<br />
+        <img src="images/image614.png" width="601" height="42" border="0" /></li>
+        <li><b>[Disabled]</b> を選択。<br />
+        <img src="images/image107.png" width="770" height="188" border="0" /></li>
+        <li>デバイスをUSBでPCに接続、<a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし拡張機能 <img src="images/image418.png" width="38" height="37" border="0" align="middle" /> から<b>マイコン拡張</b>を選択。</li>
+        <li><b>ファームウェア書き込み</b>： マイコンを選択して <b>[書き込み</b>] をクリック。</li>
+        <li><b>WiFi設定</b>：SSIDとパスワードを入力して <b>[接続 ssid]</b> をクリック。成功するとアプリに<b>IPアドレス</b>が記録されます。</li>
+        <li><b>HTTPアクセス</b>： WiFiで接続するために <b>[HTTPS→HTTP]</b> をクリック。</li>
+        <li><b>接続</b>： もう一度<b>マイコン拡張</b>を選択し、④のIPアドレスが⑥に設定されていることを確認、<b>[接続/切断]</b> をクリックしてデバイスと接続。<br />
+        <img src="images/image218.png" width="494" height="323" border="0" /></li>
+      </ol>
+      <ul>
+        <li>もう一度IPアドレスを確認・設定するときはUSB接続で <a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし、<img src="images/image217.png" width="91" height="35" border="0" align="middle" />を押して下さい。</li>
+      </ul>
+
+      <h3><a name="error" id="error">WiFiで接続できないとき(ESP32)</a></h3>
+      <ul>
+        <li>現在Chromeブラウザのみ対応です、Firefox/Edge/Safariブラウザでは動作しません。</li>
+        <li><b>USB接続でIPアドレスを確認＆再設定</b><br />
+        USBで接続、<a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスしマイコン拡張を選択し、[WiFi接続状態] をクリックして接続状態を確認して下さい。マイコンのIPアドレスが変わった場合はパソコン/タブレットのcookieに保存されたマイコンIPアドレスを更新します。<br />
+        <img src="images/image810.png" width="213" height="86" border="0" /><br />
+        　</li>
+
+        <li><b>本体LCDでIPアドレスを確認＆再設定 (M5StickCなど)</b><br />
+        M5Stack、M5StickCはWiFi接続に成功すると本体LCDに 192.168.1.123 のようにIPアドレスが表示されます。<a href="http://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttp</b></a> にアクセスして直接IPアドレスを設定します。<br />
+        <img src="images/image94.png" width="237" height="95" border="0" /><br />
+        　</li>
+
+        <li><b><a href="http://sohta02.web.fc2.com/familyday_app3.html#setup_uno">つくるっちexe版</a> でIPアドレスを確認</b><br />
+        <font color="#ff0000">※[ロボットに接続]を選択しないで下さい</font><br />
+        <img src="images/image81.png" width="384" height="209" border="0" /><br />
+        　</li>
+      </ul>
+
+  <script type="text/javascript">
+var clipboard = new ClipboardJS('.btn');
+  </script>
+    </div>
+    <!-- /#main -->
+    <div id="hpb-aside">
+      <!-- /.section -->
+      <div class="section">
+        <p><b><a href="../">クアッドクローラーAIトップ</a></b></p>
+        <ul>
+          <li><a href="app.html">アプリ</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://sohta02.web.fc2.com/familyday.html">つくるっちサイト</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /#hpb-aside -->
+  </div>
+  <!-- /#contents -->
+  <div id="hpb-footer">
+    <div class="copyright">Copyright &#169; 2014-2019 sohta &amp; mei All Rights Reserved.</div>
+  </div>
+  <!-- /#hpb-footer -->
+</div>
+<!-- /#top --></body>
+</html>

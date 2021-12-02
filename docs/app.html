@@ -26,12 +26,15 @@
       <h2>つくるっちアプリ</h2>
       <p>　　<a href="https://sohta02.sakura.ne.jp/tukurutch/"><img src="images/TuKuRuCh-Logo_FULL.png" width="353" height="100" border="0" /></a></p>
       <ul>
-        <li><a href="#app">アプリ</a></li>
-        <li><a href="#setup_esp32">セットアップ</a></li>
+        <li><a href="#app">プログラミングアプリ「つくるっち」について</a></li>
+        <li><a href="#setup_esp32">WiFiセットアップ</a></li>
+        <li><a href="#remote">パソコンからリモート操縦</a></li>
+        <li><a href="#imageDetect">画像認識に挑戦！</a></li>
+        <li><a href="#sourcecode">ロボットソースコード、FW開発環境</a></li>
         <li><a href="#error">WiFiで接続できないとき</a></li>
       </ul>
 
-      <h3><a name="app" id="app">アプリ</a></h3>
+      <h3><a name="app" id="app">プログラミングアプリ「つくるっち」について</a></h3>
       <ul>
         <li>for USB接続：<a href="https://sohta02.sakura.ne.jp/tukurutch/">https://sohta02.sakura.ne.jp/tukurutch/</a>　（<a href="https://sohta02.sakura.ne.jp/tukurutch/list.html">サンプル一覧</a>）</li>
         <li>for WiFi接続：<a href="http://sohta02.sakura.ne.jp/tukurutch/">http://sohta02.sakura.ne.jp/tukurutch/</a>　（<a href="http://sohta02.sakura.ne.jp/tukurutch/list.html">サンプル一覧</a>）</li>
@@ -56,25 +59,56 @@
         </table>
         </li>
       </ul>
-      <h3><a name="setup_esp32" id="setup_esp32">セットアップ</a></h3>
+
+      <h3><a name="setup_esp32" id="setup_esp32">WiFiセットアップ</a></h3>
       <ol>
-        <li>chromeブラウザ(chrome89)でカメラ画像を表示するためにchromeブラウザの設定を変更する必要があります。<br />
+        <li>chromeブラウザでカメラ画像を表示するためにchromeブラウザの設定を変更する必要があります。<br />
         下記アドレスをコピー。<br />
         <input id="waveTK" value="chrome://flags/#block-insecure-private-network-requests" size="60" />
-        <button type="button" class="btn" data-clipboard-target="#waveTK">コピー</button></li>
-        <li>ブラウザのアドレスバーに貼り付けて開く。<br />
-        <img src="images/image614.png" width="601" height="42" border="0" /></li>
-        <li><b>[Disabled]</b> を選択。<br />
+        <button type="button" class="btn" data-clipboard-target="#waveTK">コピー</button><br />
+        ブラウザのアドレスバーに貼り付けて開く。<br />
+        <img src="images/image614.png" width="601" height="42" border="0" /><br />
+        <b>[Disabled]</b> を選択。<br />
         <img src="images/image107.png" width="770" height="188" border="0" /></li>
-        <li>デバイスをUSBでPCに接続、<a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし拡張機能 <img src="images/image418.png" width="38" height="37" border="0" align="middle" /> から<b>マイコン拡張</b>を選択。</li>
-        <li><b>ファームウェア書き込み</b>： マイコンを選択して <b>[書き込み</b>] をクリック。</li>
+        <li>デバイスをUSBでPCに接続、<a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし拡張機能 <img src="images/image418.png" width="38" height="37" border="0" align="middle" /> から<b>QuadCrawlerAI</b>を選択。</li>
+        <li><b>ファームウェア書き込み</b>：  <b>[書き込み</b>] をクリック。</li>
         <li><b>WiFi設定</b>：SSIDとパスワードを入力して <b>[接続 ssid]</b> をクリック。成功するとアプリに<b>IPアドレス</b>が記録されます。</li>
         <li><b>HTTPアクセス</b>： WiFiで接続するために <b>[HTTPS→HTTP]</b> をクリック。</li>
-        <li><b>接続</b>： もう一度<b>マイコン拡張</b>を選択し、④のIPアドレスが⑥に設定されていることを確認、<b>[接続/切断]</b> をクリックしてデバイスと接続。<br />
+        <li><b>接続</b>： もう一度<b>マイコン拡張</b>を選択し、④のIPアドレスが⑥に設定されていることを確認、<b>[接続/切断]</b> をクリックしてデバイスと接続。右上のアイコンが ！ から ✔ に変わり、つくるっちアプリでカメラの画像が表示されればOKです。<br />
         <img src="images/image218.png" width="494" height="323" border="0" /></li>
       </ol>
       <ul>
+        <li>この状態でカメラの画像をパソコンで表示しながら付属の赤外線リモコンでロボットを操作することが出来ます。</li>
         <li>もう一度IPアドレスを確認・設定するときはUSB接続で <a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし、<img src="images/image217.png" width="91" height="35" border="0" align="middle" />を押して下さい。</li>
+      </ul>
+
+      <h3><a name="remote" id="remote">パソコンからリモート操縦</a></h3>
+      <p>　赤外線リモコン以外にパソコンのキーボードからロボットを操縦することができます。</p>
+      <ul>
+        <li>WiFiセットアップを完了した状態で下記のサイトを開いてください。<br />
+        <a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000050">操縦アプリ</a></li>
+        <li>キーボードの上下左右カーソルキーを押して下さい、ロボットが前後左右に動きます。</li>
+        <li>キーボードのz, xキーを押して下さい、ロボットが左右に回転します。</li>
+        <li>パソコン画面の上下左右キー、パソコンに接続したゲームパッドでもロボットを操縦することが出来ます。</li>
+      </ul>
+
+      <h3><a name="imageDetect" id="imageDetect">画像認識に挑戦！</a></h3>
+      <ul>
+        <li>現在下記のサンプルアプリを用意しています。<br />
+        <a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000051">顔追従</a><br />
+        <a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000052">色追従</a><br />
+        <a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000053">ライントレース</a><br />
+        </li>
+        <li>詳細準備中。。</li>
+      </ul>
+
+      <h3><a name="sourcecode" id="sourcecode">ロボットソースコード、FW開発環境</a></h3>
+      <ul>
+        <li>ロボットFWの開発環境としてつくるっちexeをリリースしています。<br />
+        <a href="http://sohta02.web.fc2.com/familyday_exe.html">http://sohta02.web.fc2.com/familyday_exe.html</a></li>
+        <li>ロボットのソースコードは下記にインストールされます。<br />
+        <b>C:\TuKuRutch\ext\libraries\QuadCrawlerAI\src</b></li>
+        <li>ビルドと書き込みは C:\TuKuRutch\Arduino.exe を利用して下さい。</li>
       </ul>
 
       <h3><a name="error" id="error">WiFiで接続できないとき</a></h3>
@@ -90,7 +124,7 @@
         <img src="images/image94.png" width="237" height="95" border="0" /><br />
         　</li>
 
-        <li><b><a href="http://sohta02.web.fc2.com/familyday_app3.html#setup_uno">つくるっちexe版</a> でIPアドレスを確認</b><br />
+        <li><b><a href="http://sohta02.web.fc2.com/familyday_exe.html">つくるっちexe版</a> でIPアドレスを確認</b><br />
         <font color="#ff0000">※[ロボットに接続]を選択しないで下さい</font><br />
         <img src="images/image81.png" width="384" height="209" border="0" /><br />
         </li>
@@ -107,8 +141,7 @@ var clipboard = new ClipboardJS('.btn');
         <p><b><a href="../">クアッドクローラーAIトップ</a></b></p>
         <ul>
           <li><a href="app.html">アプリ</a></li>
-        </ul>
-        <ul>
+          <li><a href="http://sohta02.web.fc2.com/familyday_exe.html">つくるっちexe</a></li>
           <li><a href="http://sohta02.web.fc2.com/familyday.html">つくるっちサイト</a></li>
         </ul>
       </div>

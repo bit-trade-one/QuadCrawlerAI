@@ -5,7 +5,7 @@
 
 ## [組み立て手順書はこちら！](https://bit-trade-one.co.jp/forUser/QCAI-MANUALWeb.pdf)
 
-## [プログラミングアプリ「つくるっち」HP](https://bit-trade-one.github.io/QuadCrawlerAI/docs/app.html)
+## [プログラミングアプリ「つくるっち」詳細はこちら！](https://bit-trade-one.github.io/QuadCrawlerAI/docs/app.html)
 
 ### [・つくるっちの始め方](https://bit-trade-one.github.io/QuadCrawlerAI/tukuruch_QCAI1st.md)  
 

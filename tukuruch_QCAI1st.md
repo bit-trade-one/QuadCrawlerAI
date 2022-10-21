@@ -4,14 +4,13 @@
 クアッドクローラAIを始め、様々なロボット・マイコンを
 ビジュアルプログラミングにて制御することが可能です。
 
-「つくるっち」には
+「つくるっち」には  
 WindowsPCにダウンロード・インストールして使用する  
 [「つくるっちexe(クリックで詳細)」](http://sohta02.web.fc2.com/familyday_exe.html)
 と  
 
 WEBブラウザから使用できる  
-「[つくるっち(クリックで詳細)](http://sohta02.web.fc2.com/familyday_about.html)  
- [(USB/BLEモード(https))](https://sohta02.sakura.ne.jp/tukurutch/　) / [(WiFiモード(http)) ](http://sohta02.sakura.ne.jp/tukurutch/) 」
+「[つくるっち(クリックで詳細)](http://sohta02.web.fc2.com/familyday_about.html) (USB/BLEモード(https)) / (WiFiモード(http))  」
 
 上記2種類が存在します。  
 

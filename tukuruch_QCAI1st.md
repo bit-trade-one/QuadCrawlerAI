@@ -16,7 +16,7 @@ WEBブラウザから使用できる
 
 つくるっちWiFiモードを使用するにはつくるっちUSBモードにてクアッドクローラAIを無線LANに接続する必要があります。  
 また、クアッドクローラAIのカメラはつくるっちWiFiモード時のみ使用可能で、使用するにはセットアップが必要です  
-[(セットアップ方法リンク)](http://sohta02.web.fc2.com/familyday_app3.html#setup_esp32)
+[(セットアップ方法リンク)](https://bit-trade-one.github.io/QuadCrawlerAI/docs/app.html#:~:text=USB%E3%80%81WiFi%E3%80%81Bluetooth-,WiFi%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97,-chrome%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7)
 
 セットアップ後、サンプルを呼び出してご使用ください。  
 [つくるっち(USB/BLEモード(https))サンプル一覧](https://sohta02.sakura.ne.jp/tukurutch/list.html)  

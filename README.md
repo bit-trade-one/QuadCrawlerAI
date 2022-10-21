@@ -7,7 +7,7 @@
 
 ## [プログラミングアプリ「つくるっち」詳細はこちら！](https://bit-trade-one.github.io/QuadCrawlerAI/docs/app.html)
 
-### [・つくるっちの始め方](tukuruch_QCAI1st.md)  
+### [・つくるっちの始め方](https://github.com/bit-trade-one/QuadCrawlerAI/blob/main/tukuruch_QCAI1st.md)  
 
 
 ## [クアッドクローラーAIでROSに対応する方法](https://github.com/bit-trade-one/QuadCrawlerAI/tree/main/ROS)

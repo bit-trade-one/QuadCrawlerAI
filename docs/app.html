@@ -62,24 +62,47 @@
 
       <h3><a name="setup_esp32" id="setup_esp32">WiFiセットアップ</a></h3>
       <ol>
-        <li>chromeブラウザでカメラ画像を表示するためにchromeブラウザの設定を変更する必要があります。<br />
-        下記アドレスをコピー。<br />
-        <input id="waveTK" value="chrome://flags/#block-insecure-private-network-requests" size="60" />
-        <button type="button" class="btn" data-clipboard-target="#waveTK">コピー</button><br />
-        ブラウザのアドレスバーに貼り付けて開く。<br />
-        <img src="images/image614.png" width="601" height="42" border="0" /><br />
-        <b>[Disabled]</b> を選択。<br />
-        <img src="images/image107.png" width="770" height="188" border="0" /></li>
-        <li>デバイスをUSBでPCに接続、<a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし拡張機能 <img src="images/image418.png" width="38" height="37" border="0" align="middle" /> から<b>QuadCrawlerAI</b>を選択。</li>
-        <li><b>ファームウェア書き込み</b>：  <b>[書き込み</b>] をクリック。</li>
-        <li><b>WiFi設定</b>：SSIDとパスワードを入力して <b>[接続 ssid]</b> をクリック。成功するとアプリに<b>IPアドレス</b>が記録されます。</li>
+        <li><b>chromeブラウザ設定.</b><br />
+        WiFiでロボットにアクセスするためにchromeブラウザの設定を変更する必要があります。<br />
+        下記アドレスをコピーしブラウザのアドレスバーに貼り付けて開く。<br />
+        <input id="waveTK0" value="chrome://flags/#https-upgrades" size="60" />
+        <button type="button" class="btn" data-clipboard-target="#waveTK0">コピー</button>
+        <br />
+        <img src="images/image138.png" width="409" height="32" border="0" /><br />
+        <br />
+        <b>[Disable]</b> を選択してRelaunch。<br />
+        <img src="images/image324.png" width="720" height="114" border="0" /><br />
+        <img src="images/image109.png" width="139" height="53" border="0" /><br />
+        <br />
+        下記アドレスをコピーしブラウザのアドレスバーに貼り付けて開く。<br />
+        <input id="waveTK1" value="chrome://flags/#unsafely-treat-insecure-origin-as-secure" size="60" />
+        <button type="button" class="btn" data-clipboard-target="#waveTK1">コピー</button><br />
+        <img src="images/image1211.png" width="569" height="32" border="0" /><br /><br />
+
+        <input id="waveTK2" value="http://sohta02.sakura.ne.jp" size="30" />
+        <button type="button" class="btn" data-clipboard-target="#waveTK2">コピー</button>  をコピーし、ブラウザに貼りつけ<b>[Enabled]</b> を選択してRelauch。<br />
+        <img src="images/image226.png" width="724" height="177" /><br />
+        <img src="images/image139.png" width="139" height="53" border="0" /><br />
+        <br />
+        この設定の後、ブラウザ起動で毎回下記warningが出ます。<br />
+        <br />
+        <img src="images/image227.png" width="708" height="42" border="0" /><br />
+        <img src="images/image229.png" width="703" height="37" border="0" /><br />
+        </li>
+
+        <li>デバイスをUSBでPCに接続、<a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000058"><b>QuadCrawlerAI新規プログラム</b></a> にアクセス。</li>
+        <li><b>ファームウェア書き込み</b>：<b>[書き込み]</b> をクリック、「xxがシリアルへの接続を要求してます」が表示されるので <b>USB Serial Port (COM x)</b> を選択。</li>
+        <li><b>WiFi設定</b>：<b>[接続/切断]</b>で<b>USB</b>を選択しクリック、「保存しました」と表示されることを確認。もう一度<b>[接続/切断]</b>をクリックしてデバイスと接続。「xxがシリアルへの接続を要求してます」が表示されるので <b>USB Serial Port (COM x)</b> を選択。<br />
+        SSIDとパスワードを入力して <b>[接続 ssid]</b> をクリック、成功すると<b>[接続/切断]</b>に<b>IPアドレス</b>が記録されます。</li>
+<!--
         <li><b>HTTPアクセス</b>： WiFiで接続するために <b>[HTTPS→HTTP]</b> をクリック。</li>
-        <li><b>接続</b>： もう一度<b>マイコン拡張</b>を選択し、④のIPアドレスが⑥に設定されていることを確認、<b>[接続/切断]</b> をクリックしてデバイスと接続。右上のアイコンが ！ から ✔ に変わり、つくるっちアプリでカメラの画像が表示されればOKです。<br />
-        <img src="images/image218.png" width="494" height="323" border="0" /></li>
+-->
+        <li><b>[接続/切断]</b>で<b>WiFi</b>を選択しクリック、「保存しました」と表示されることを確認。もう一度<b>[接続/切断]</b>をクリックしてデバイスと接続。右上のアイコンが ！ から ✔ に変わり、つくるっちアプリでカメラの画像が表示されればOKです。<br />
+        <img src="images/image218R.png" width="494" height="323" border="0" /></li>
       </ol>
       <ul>
-        <li>この状態でカメラの画像をパソコンで表示しながら付属の赤外線リモコンでロボットを操作することが出来ます。</li>
-        <li>もう一度IPアドレスを確認・設定するときはUSB接続で <a href="https://sohta02.sakura.ne.jp/tukurutch/"><b>つくるっちhttps</b></a> にアクセスし、<img src="images/image217.png" width="91" height="35" border="0" align="middle" />を押して下さい。</li>
+        <li>この状態でカメラの画像をパソコンで表示しながら付属の赤外線リモコンでロボットを操作することが出来ます。様々なサンプルプログラムは<a href="http://sohta02.sakura.ne.jp/tukurutch/list.html#QuadCrawlerAI"><b>こちら</b></a>になります。</li>
+        <li>もう一度IPアドレスを確認・設定するときはUSB接続して<a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000058"><b>QuadCrawlerAI新規プログラム</b></a>にアクセスし、<b>[接続/切断]</b>で<b>USB</b>を選択し2回クリックしてデバイスと接続。<img src="images/image217.png" width="91" height="35" border="0" align="middle" />を押して下さい。</li>
       </ul>
 
       <h3><a name="remote" id="remote">パソコンからリモート操縦</a></h3>

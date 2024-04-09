@@ -63,7 +63,15 @@
 
       <h3><a name="setup_esp32" id="setup_esp32">WiFiセットアップ</a></h3>
       <ol>
-        <li><b>chromeブラウザ設定.</b><br />
+        <li><b>★重要★chromeブラウザでのアクセスについて</b><br />
+        つくるっちアプリをアクセスするとき<b>アドレスバーをクリックしてhttps からhttp に変更してください。</b><br />
+        下図のようにURLの左側のアイコンが！になっていればOKです。<br />
+        　<b><font color="#ff0000">NG</font></b>：<img src="images/image140.png" width="399" height="30" border="0" align="middle" /> <br />
+        　<b><font color="#ff0000">OK</font></b>：<img src="images/image230.png" width="397" height="23" border="0" align="middle" /> <br />
+        この手順は次の<b>chromeブラウザ設定２</b>のあとに行ってください。<br />
+        数年前からchromeブラウザではhttpサイトを開こうとすると自動的にhttpsに変更されていました。2024/3まではブラウザ設定 #https-upgrades をdisable設定することで無効にすることができたのですが、2024/4にこの設定が無くなってしまいました。<br /></li>
+<!--
+        <li><b>chromeブラウザ設定１</b><br />
         WiFiでロボットにアクセスするためにchromeブラウザの設定を変更する必要があります。<br />
         下記アドレスをコピーしブラウザのアドレスバーに貼り付けて開く。<br />
         <input id="waveTK0" value="chrome://flags/#https-upgrades" size="60" />
@@ -74,7 +82,9 @@
         <b>[Disable]</b> を選択してRelaunch。<br />
         <img src="images/image324.png" width="720" height="114" border="0" /><br />
         <img src="images/image109.png" width="139" height="53" border="0" /><br />
-        <br />
+        </li>
+-->
+        <li><b>chromeブラウザ設定２(insecure origin)</b><br />
         下記アドレスをコピーしブラウザのアドレスバーに貼り付けて開く。<br />
         <input id="waveTK1" value="chrome://flags/#unsafely-treat-insecure-origin-as-secure" size="60" />
         <button type="button" class="btn" data-clipboard-target="#waveTK1">コピー</button><br />
@@ -91,7 +101,12 @@
         <img src="images/image229.png" width="703" height="37" border="0" /><br />
         </li>
 
-        <li>デバイスをUSBでPCに接続、<a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000058"><b>QuadCrawlerAI新規プログラム</b></a> にアクセス。</li>
+        <li>デバイスをUSBでPCに接続、<a href="http://sohta02.sakura.ne.jp/tukurutch/index.html#000000058"><b>QuadCrawlerAI新規プログラム</b></a> にアクセス。<br />
+        サイトを開いた後、<b>http<font color="#ff0000">s</font> をhttp に変更してください。</b><br />
+        　<b><font color="#ff0000">NG</font></b>：<img src="images/image140.png" width="399" height="30" border="0" align="middle" /><br />
+        　<b><font color="#ff0000">OK</font></b>：<img src="images/image230.png" width="397" height="23" border="0" align="middle" />
+        <br />
+        </li>
 
         <li><b>ファームウェア書き込み</b>：<b>[書き込み]</b> をクリック、<br />
         「xxがシリアルへの接続を要求してます」が表示されるので <b>USB Serial Port (COM x)</b> を選択。</li>
